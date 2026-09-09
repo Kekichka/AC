@@ -1,0 +1,3 @@
+{"sessionId":"claude-plan-001","uuid":"msg-01","message":{"role":"assistant","content":[{"type":"tool_use","name":"View","input":{"file_path":"src/app"}}]}}
+{"sessionId":"claude-plan-001","uuid":"msg-02","message":{"role":"assistant","content":[{"type":"tool_use","name":"Write","input":{"file_path":"pages/api/health.ts"}}]}}
+{"sessionId":"claude-plan-001","uuid":"msg-03","message":{"role":"assistant","content":[{"type":"tool_use","name":"Write","input":{"file_path":"tests/health.test.ts"}}]}}

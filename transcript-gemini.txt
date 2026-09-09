@@ -1,0 +1,3 @@
+{"sessionId":"gemini-plan-002","parts":[{"functionCall":{"name":"View","args":{"file_path":"package.json"}}}]}
+{"sessionId":"gemini-plan-002","parts":[{"functionCall":{"name":"Bash","args":{"command":"npm install cors"}}}]}
+{"sessionId":"gemini-plan-002","parts":[{"functionCall":{"name":"Write","args":{"file_path":"src/pages/api/health.ts"}}}]}
