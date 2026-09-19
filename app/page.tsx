@@ -32,6 +32,11 @@ export default function HomePage() {
       >
         {TASK_HINT}
       </p>
+      <p style={{ margin: '0.5rem 0 0' }}>
+        <a href="/api/health" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>
+          Стан сервісу
+        </a>
+      </p>
     </main>
   );
 }
