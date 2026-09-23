@@ -3,12 +3,11 @@ import { ToolLoopAgent, tool, isStepCount } from 'ai';
 import { google } from '@ai-sdk/google';
 import { z } from 'zod';
 import { langfuseSpanProcessor } from '@/src/otel/langfuse';
-import { CATALOG } from '@/src/models';
 
 export const maxDuration = 60;
 
 const agent = new ToolLoopAgent({
-  model: google(CATALOG['gemini-3.8-flash'].id),
+  model: google('gemini-3.6-flash'),
   instructions: 'Для поточного часу використовуй інструмент getTime.',
   tools: {
     getTime: tool({
