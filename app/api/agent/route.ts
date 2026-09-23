@@ -21,8 +21,13 @@ const agent = new ToolLoopAgent({
 });
 
 export async function POST(req: Request) {
+  console.log('[AGENT_DEBUG] PK:', process.env.LANGFUSE_PUBLIC_KEY ? 'OK' : 'MISSING');
+  console.log('[AGENT_DEBUG] HOST:', process.env.LANGFUSE_BASE_URL);
+
   after(async () => {
+    console.log('[AGENT_DEBUG] Flushing spans to Langfuse...');
     await langfuseSpanProcessor.forceFlush();
+    console.log('[AGENT_DEBUG] Flush completed!');
   });
 
   const body = (await req.json().catch(() => ({}))) as { prompt?: unknown };
