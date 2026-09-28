@@ -44,3 +44,13 @@ This repository serves as an environment for developing and verifying agentic sy
 ```
 
 ## 4. Три прогони (крок 11)
+
+## 4. Три прогони (крок 11)
+
+Вхід: `Додай ендпоінт GET /api/health так, щоб проходив tests/health.test.ts (контракт — src/health.ts). Запропонуй повний вміст файлів.`
+
+| форма API | зупинка | кроки | вхідні | кешовані | вихідні | $ фактично | $ за прайсом | затримка, мс | дата |
+|---|---|---|---|---|---|---|---|---|---|
+| Chat Completions (Gemini 3.6 Flash) | done | 1 | 15613 | 8978 | 668 | 0.000000 | 0.014215 | 4129 | 2026-09-23 |
+| Messages (Ollama qwen3:4b) | max-steps | 3 | 1500 | 976 | 1536 | 0.000000 | 0.000000 | 124971 | 2026-09-23 |
+| Chat Completions (Ollama qwen3:4b) | max-steps | 3 | 1500 | 0 | 1536 | 0.000000 | 0.000000 | > 180000 | 2026-09-23 |
