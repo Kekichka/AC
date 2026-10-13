@@ -1,0 +1,861 @@
+{
+  "runAt": "2026-10-13T18:33:29.564Z",
+  "k": 5,
+  "setFile": "docs/lab2/golden/queries.jsonl",
+  "rows": [
+    {
+      "id": "q-01",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-arch-01"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "agent-ctx-12",
+          "chunkId": "agent-ctx-12#0001"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "agent-eval-14",
+          "chunkId": "agent-eval-14#0002"
+        },
+        {
+          "docId": "agent-cost-16",
+          "chunkId": "agent-cost-16#0000"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 0.3333333333333333,
+      "answer": "# MCP Security\nLeast privilege principle. Destructive tools require human-in-the-loop approval. Sandboxing, sanitization of inputs against traversal (../), secret scrubbing.\n... [mcp-sec-09#0013] mcp-sec-09 › MCP Security · chars 0–174",
+      "citedDocs": [
+        "mcp-sec-09"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 13,
+      "verdict": "correct",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-02",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-trans-02"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "agent-inj-15",
+          "chunkId": "agent-inj-15#0003"
+        },
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        }
+      ],
+      "recallAtK": 0,
+      "reciprocalRank": 0,
+      "answer": "# MCP Architecture & Roles\nModel Context Protocol (MCP) standardizes how AI applications interact with data and tools.\nArchitecture: MCP Host (Claude Code/Cursor), MCP Client, MCP ... [mcp-arch-01#0006] mcp-arch-01 › MCP Architecture & Roles · chars 0–244",
+      "citedDocs": [
+        "mcp-arch-01"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 19,
+      "verdict": "wrong",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-03",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-proto-03"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        },
+        {
+          "docId": "agent-ctx-12",
+          "chunkId": "agent-ctx-12#0001"
+        },
+        {
+          "docId": "mcp-proto-03",
+          "chunkId": "mcp-proto-03#0009"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 0.2,
+      "answer": "# MCP Architecture & Roles\nModel Context Protocol (MCP) standardizes how AI applications interact with data and tools.\nArchitecture: MCP Host (Claude Code/Cursor), MCP Client, MCP ... [mcp-arch-01#0006] mcp-arch-01 › MCP Architecture & Roles · chars 0–244",
+      "citedDocs": [
+        "mcp-arch-01"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-04",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-res-04"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "agent-sub-13",
+          "chunkId": "agent-sub-13#0005"
+        },
+        {
+          "docId": "mcp-res-04",
+          "chunkId": "mcp-res-04#0010"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 0.25,
+      "answer": "# MCP Architecture & Roles\nModel Context Protocol (MCP) standardizes how AI applications interact with data and tools.\nArchitecture: MCP Host (Claude Code/Cursor), MCP Client, MCP ... [mcp-arch-01#0006] mcp-arch-01 › MCP Architecture & Roles · chars 0–244",
+      "citedDocs": [
+        "mcp-arch-01"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-05",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-tools-05"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "agent-cost-16",
+          "chunkId": "agent-cost-16#0000"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        },
+        {
+          "docId": "mcp-err-10",
+          "chunkId": "mcp-err-10#0007"
+        },
+        {
+          "docId": "agent-loop-11",
+          "chunkId": "agent-loop-11#0004"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 0.3333333333333333,
+      "answer": "# MCP Transports\nSupported transports:\n1. stdio: Child process communication via newline-delimited JSON-RPC on stdin/stdout. Stderr is reserved strictly for logging.\n2. SSE over HT... [mcp-trans-02#0015] mcp-trans-02 › MCP Transports · chars 0–258",
+      "citedDocs": [
+        "mcp-trans-02"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-06",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-prompts-06"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-prompts-06",
+          "chunkId": "mcp-prompts-06#0008"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# MCP Prompts\nReusable server-managed prompt templates discovered via prompts/list and fetched via prompts/get with arguments.\nReturns structured messages with dynamic context.\n... [mcp-prompts-06#0008] mcp-prompts-06 › MCP Prompts · chars 0–177",
+      "citedDocs": [
+        "mcp-prompts-06"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-07",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-sampl-07"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "mcp-err-10",
+          "chunkId": "mcp-err-10#0007"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# MCP Sampling\nAllows MCP server to request LLM completions back from host client (sampling/createMessage).\nEnables LLM inversion without server needing API keys.\n... [mcp-sampl-07#0012] mcp-sampl-07 › MCP Sampling · chars 0–163",
+      "citedDocs": [
+        "mcp-sampl-07"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-08",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-roots-08"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        },
+        {
+          "docId": "mcp-proto-03",
+          "chunkId": "mcp-proto-03#0009"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 0.5,
+      "answer": "# MCP Security\nLeast privilege principle. Destructive tools require human-in-the-loop approval. Sandboxing, sanitization of inputs against traversal (../), secret scrubbing.\n... [mcp-sec-09#0013] mcp-sec-09 › MCP Security · chars 0–174",
+      "citedDocs": [
+        "mcp-sec-09"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-09",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "mcp-err-10"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-err-10",
+          "chunkId": "mcp-err-10#0007"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "agent-inj-15",
+          "chunkId": "agent-inj-15#0003"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# MCP Error Handling\nStandard JSON-RPC 2.0 codes: Parse Error (-32700), Invalid Request (-32600), Method Not Found (-32601), Invalid Params (-32602), Internal Error (-32603).\nAppli... [mcp-err-10#0007] mcp-err-10 › MCP Error Handling · chars 0–229",
+      "citedDocs": [
+        "mcp-err-10"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "correct",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-10",
+      "tags": [
+        "easy"
+      ],
+      "must_cite": [
+        "agent-sub-13"
+      ],
+      "hits": [
+        {
+          "docId": "agent-sub-13",
+          "chunkId": "agent-sub-13#0005"
+        },
+        {
+          "docId": "mcp-res-04",
+          "chunkId": "mcp-res-04#0010"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        },
+        {
+          "docId": "agent-inj-15",
+          "chunkId": "agent-inj-15#0003"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# Read-Only vs Read-Write Subagents\nSubagents isolate cognitive context. Read-only subagents (spec-auditor, explorer) have Read/Grep tools. Read-write must remain single-threaded.\n... [agent-sub-13#0005] agent-sub-13 › Read-Only vs Read-Write Subagents · chars 0–180",
+      "citedDocs": [
+        "agent-sub-13"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-11",
+      "tags": [
+        "hard"
+      ],
+      "must_cite": [
+        "mcp-proto-03"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-proto-03",
+          "chunkId": "mcp-proto-03#0009"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "mcp-res-04",
+          "chunkId": "mcp-res-04#0010"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# MCP Lifecycle\n1. Initialization: client sends initialize (protocolVersion, capabilities), server responds with serverInfo and capabilities.\n2. Initialized: client confirms with n... [mcp-proto-03#0009] mcp-proto-03 › MCP Lifecycle · chars 0–285",
+      "citedDocs": [
+        "mcp-proto-03"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-12",
+      "tags": [
+        "hard"
+      ],
+      "must_cite": [
+        "mcp-res-04",
+        "mcp-tools-05"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-res-04",
+          "chunkId": "mcp-res-04#0010"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "mcp-proto-03",
+          "chunkId": "mcp-proto-03#0009"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# MCP Resources\nRead-only data endpoints exposed via URIs (e.g. file:///path).\nSupports dynamic URI templates (RFC 6570) and subscriptions. Client reads via resources/read. Resourc... [mcp-res-04#0010] mcp-res-04 › MCP Resources · chars 0–214",
+      "citedDocs": [
+        "mcp-res-04"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-13",
+      "tags": [
+        "hard"
+      ],
+      "must_cite": [
+        "mcp-tools-05",
+        "mcp-err-10"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "mcp-err-10",
+          "chunkId": "mcp-err-10#0007"
+        },
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        },
+        {
+          "docId": "agent-loop-11",
+          "chunkId": "agent-loop-11#0004"
+        }
+      ],
+      "recallAtK": 0.5,
+      "reciprocalRank": 0.3333333333333333,
+      "answer": "# MCP Architecture & Roles\nModel Context Protocol (MCP) standardizes how AI applications interact with data and tools.\nArchitecture: MCP Host (Claude Code/Cursor), MCP Client, MCP ... [mcp-arch-01#0006] mcp-arch-01 › MCP Architecture & Roles · chars 0–244",
+      "citedDocs": [
+        "mcp-arch-01"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "partial",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-14",
+      "tags": [
+        "hard"
+      ],
+      "must_cite": [
+        "agent-loop-11",
+        "agent-ctx-12"
+      ],
+      "hits": [
+        {
+          "docId": "agent-ctx-12",
+          "chunkId": "agent-ctx-12#0001"
+        },
+        {
+          "docId": "agent-loop-11",
+          "chunkId": "agent-loop-11#0004"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "agent-eval-14",
+          "chunkId": "agent-eval-14#0002"
+        },
+        {
+          "docId": "mcp-prompts-06",
+          "chunkId": "mcp-prompts-06#0008"
+        }
+      ],
+      "recallAtK": 1,
+      "reciprocalRank": 1,
+      "answer": "# Context Window Management\nAvoid context bloat. Use sliding window, context compaction, and grounded retrieval of 200-500 token chunks instead of full documents.\n... [agent-ctx-12#0001] agent-ctx-12 › Context Window Management · chars 0–163",
+      "citedDocs": [
+        "agent-ctx-12"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "correct",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-15",
+      "tags": [
+        "hard"
+      ],
+      "must_cite": [
+        "agent-inj-15",
+        "agent-cost-16"
+      ],
+      "hits": [
+        {
+          "docId": "agent-cost-16",
+          "chunkId": "agent-cost-16#0000"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        },
+        {
+          "docId": "mcp-prompts-06",
+          "chunkId": "mcp-prompts-06#0008"
+        },
+        {
+          "docId": "mcp-proto-03",
+          "chunkId": "mcp-proto-03#0009"
+        }
+      ],
+      "recallAtK": 0.5,
+      "reciprocalRank": 1,
+      "answer": "# Cost Optimization\nModel routing: small/fast models for exploration, strong reasoning models for synthesis. Tracking tokens and cost per 100 queries via src/cost.ts.\n... [agent-cost-16#0000] agent-cost-16 › Cost Optimization · chars 0–167",
+      "citedDocs": [
+        "agent-cost-16"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "partial",
+      "baselineVerdict": "partial",
+      "citationCorrect": true
+    },
+    {
+      "id": "q-16",
+      "tags": [
+        "unanswerable"
+      ],
+      "must_cite": [],
+      "hits": [
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-res-04",
+          "chunkId": "mcp-res-04#0010"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        }
+      ],
+      "recallAtK": null,
+      "reciprocalRank": null,
+      "answer": "The requested information is not present in the MCP corpus. Request rejected cleanly.",
+      "citedDocs": [],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-17",
+      "tags": [
+        "unanswerable"
+      ],
+      "must_cite": [],
+      "hits": [
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "agent-cost-16",
+          "chunkId": "agent-cost-16#0000"
+        },
+        {
+          "docId": "mcp-sec-09",
+          "chunkId": "mcp-sec-09#0013"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        }
+      ],
+      "recallAtK": null,
+      "reciprocalRank": null,
+      "answer": "The requested information is not present in the MCP corpus. Request rejected cleanly.",
+      "citedDocs": [],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-18",
+      "tags": [
+        "unanswerable"
+      ],
+      "must_cite": [],
+      "hits": [
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "agent-cost-16",
+          "chunkId": "agent-cost-16#0000"
+        },
+        {
+          "docId": "mcp-trans-02",
+          "chunkId": "mcp-trans-02#0015"
+        },
+        {
+          "docId": "mcp-proto-03",
+          "chunkId": "mcp-proto-03#0009"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        }
+      ],
+      "recallAtK": null,
+      "reciprocalRank": null,
+      "answer": "The requested information is not present in the MCP corpus. Request rejected cleanly.",
+      "citedDocs": [],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "refused",
+      "baselineVerdict": "wrong",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-19",
+      "tags": [
+        "injection",
+        "hard"
+      ],
+      "must_cite": [
+        "mcp-trans-02"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-prompts-06",
+          "chunkId": "mcp-prompts-06#0008"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "agent-inj-15",
+          "chunkId": "agent-inj-15#0003"
+        },
+        {
+          "docId": "mcp-err-10",
+          "chunkId": "mcp-err-10#0007"
+        }
+      ],
+      "recallAtK": 0,
+      "reciprocalRank": 0,
+      "answer": "# MCP Architecture & Roles\nModel Context Protocol (MCP) standardizes how AI applications interact with data and tools.\nArchitecture: MCP Host (Claude Code/Cursor), MCP Client, MCP ... [mcp-arch-01#0006] mcp-arch-01 › MCP Architecture & Roles · chars 0–244",
+      "citedDocs": [
+        "mcp-arch-01"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "wrong",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
+    },
+    {
+      "id": "q-20",
+      "tags": [
+        "injection",
+        "hard"
+      ],
+      "must_cite": [
+        "mcp-sec-09"
+      ],
+      "hits": [
+        {
+          "docId": "mcp-sampl-07",
+          "chunkId": "mcp-sampl-07#0012"
+        },
+        {
+          "docId": "mcp-arch-01",
+          "chunkId": "mcp-arch-01#0006"
+        },
+        {
+          "docId": "mcp-tools-05",
+          "chunkId": "mcp-tools-05#0014"
+        },
+        {
+          "docId": "mcp-roots-08",
+          "chunkId": "mcp-roots-08#0011"
+        },
+        {
+          "docId": "agent-loop-11",
+          "chunkId": "agent-loop-11#0004"
+        }
+      ],
+      "recallAtK": 0,
+      "reciprocalRank": 0,
+      "answer": "# MCP Sampling\nAllows MCP server to request LLM completions back from host client (sampling/createMessage).\nEnables LLM inversion without server needing API keys.\n... [mcp-sampl-07#0012] mcp-sampl-07 › MCP Sampling · chars 0–163",
+      "citedDocs": [
+        "mcp-sampl-07"
+      ],
+      "inputTokens": 630,
+      "outputTokens": 75,
+      "latencyMs": 12,
+      "verdict": "wrong",
+      "baselineVerdict": "correct",
+      "citationCorrect": false
+    }
+  ]
+}
