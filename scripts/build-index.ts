@@ -36,15 +36,14 @@ async function main() {
 
   const texts = allChunksToEmbed.map((c) => c.text);
   const vectors = await embedder.embedDocuments(texts);
-
-  const indexedChunks: IndexedChunk[] = allChunksToEmbed.map((c, i) => ({
+const indexedChunks: IndexedChunk[] = allChunksToEmbed.map((c, i) => ({
     id: `${c.docId}#${String(i).padStart(4, '0')}`,
     docId: c.docId,
     heading: c.heading,
     start: c.start,
     end: c.end,
     text: c.text,
-    vector: vectors[i],
+    vector: vectors[i] ?? new Array<number>(embedder.dimensions).fill(0),
   }));
 
   const indexFile: IndexFile = {

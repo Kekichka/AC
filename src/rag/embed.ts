@@ -5,7 +5,6 @@ export interface Embedder {
   embedQuery(text: string): Promise<number[]>;
 }
 
-/** Детермінований ембедер на FNV-1a хідшах для тестів і відтворюваності в CI */
 export function fakeEmbedder(dimensions = 768): Embedder {
   const vector = (text: string): number[] => {
     const v = new Array<number>(dimensions).fill(0);
@@ -16,7 +15,8 @@ export function fakeEmbedder(dimensions = 768): Embedder {
         h ^= word.charCodeAt(i);
         h = Math.imul(h, 16777619);
       }
-      v[Math.abs(h) % dimensions] += 1;
+      const idx = Math.abs(h) % dimensions;
+      v[idx] = (v[idx] ?? 0) + 1;
     }
     const norm = Math.hypot(...v) || 1;
     return v.map((x) => x / norm);
@@ -30,7 +30,6 @@ export function fakeEmbedder(dimensions = 768): Embedder {
   };
 }
 
-/** Локальна Ollama (якщо встановлена локально) */
 export function ollamaEmbedder(model = 'embeddinggemma-2:270m', dimensions = 768): Embedder {
   const base = process.env.OLLAMA_URL ?? 'http://localhost:11434';
   const call = async (input: readonly string[]): Promise<number[][]> => {
@@ -48,6 +47,9 @@ export function ollamaEmbedder(model = 'embeddinggemma-2:270m', dimensions = 768
     id: `ollama:${model}`,
     dimensions,
     embedDocuments: call,
-    embedQuery: async (text) => (await call([text]))[0],
+    embedQuery: async (text) => {
+      const vecs = await call([text]);
+      return vecs[0] ?? new Array<number>(dimensions).fill(0);
+    },
   };
 }

@@ -31,14 +31,14 @@ function sections(text: string): { heading: string; span: Span }[] {
   let offset = 0;
   for (const line of text.split('\n')) {
     const m = /^(#{1,6})\s+(.+)$/.exec(line);
-    if (m) {
+    if (m && m[1] && m[2]) {
       if (offset > current.start) out.push({ heading: current.heading, span: { start: current.start, end: offset } });
       const level = m[1].length;
       path.length = level - 1;
       path[level - 1] = m[2].trim();
       current = { heading: path.filter(Boolean).join(' › '), start: offset };
     }
-    offset += line.length + 1; // +1 — це '\n'
+    offset += line.length + 1;
   }
   out.push({ heading: current.heading, span: { start: current.start, end: text.length } });
   return out.filter((s) => text.slice(s.span.start, s.span.end).trim() !== '');
@@ -56,10 +56,10 @@ function split(text: string, span: Span, rule: ChunkRule): Span[] {
   while (span.end - start > rule.maxChars) {
     const window = text.slice(start, start + rule.maxChars);
     const cut =
-      lastBoundary(window, /\n{2,}/g) ??        // 1. порожній рядок
-      lastBoundary(window, /[.!?…»]\s/g) ??     // 2. кінець речення
-      lastBoundary(window, /\s/g) ??            // 3. хоч пробіл
-      rule.maxChars;                            // 4. різати всередині слова
+      lastBoundary(window, /\n{2,}/g) ??
+      lastBoundary(window, /[.!?…»]\s/g) ??
+      lastBoundary(window, /\s/g) ??
+      rule.maxChars;
     const end = start + cut;
     pieces.push({ start, end });
     const back = Math.max(end - rule.overlapChars, start + 1);

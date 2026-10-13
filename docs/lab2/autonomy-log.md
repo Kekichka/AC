@@ -56,3 +56,17 @@
   5. Покрито тестами `tests/chunk.test.ts` та `tests/index.test.ts` (перевірка зсувів та sha256).
   6. Складено звіт у `docs/lab2/indexing.md`.
 - Відхилення від плану: Немає.
+
+## Сесія 05 · 2026-10-13 · Кроки 04–05 (Індексація, ембедінги та гібридний пошук)
+- Інструмент: VS Code + Git Bash + Assistant
+- Модель: Claude 3.5 Sonnet / Gemini 2.5 Flash
+- Режим дозволів: Ask before edit / Step-by-step confirmation
+- Мета: Реалізація індексації корпусу, генерація `data/index.json`, реалізація гібридного пошуку (BM25 + Cosine + RRF k=60) та обов'язкового цитування з валідацією.
+- Що зроблено:
+  1. Реалізовано фрагментацію в `src/rag/chunk.ts` (1200 / 200 / 120 симв.) з дотриманням інваріанта зсувів.
+  2. Побудовано `data/index.json` через скрипт `scripts/build-index.ts` (16 документів, 16 фрагментів, 768 вимірів).
+  3. Реалізовано алгоритми `src/rag/bm25.ts` ($k_1=1.2, b=0.75$), `src/rag/rrf.ts` ($k=60$) та гібридний двигун `src/rag/search.ts`.
+  4. Написано валідатор цитувань `src/rag/cite.ts` і CLI-скрипт `scripts/search.ts` з прапорцем `--explain`.
+  5. Пройдено всі 105 тестів і виправлено суворі типи TypeScript (`npm run typecheck` зелений).
+  6. Оформлено звіти `docs/lab2/indexing.md` та `docs/lab2/retrieval.md`.
+- Відхилення від плану: Виправлено індексацію масивів під `noUncheckedIndexedAccess`.
