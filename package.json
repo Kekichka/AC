@@ -14,6 +14,7 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
+    "index": "tsx scripts/build-index.ts",
     "e2e": "playwright test",
     "doctor": "tsx scripts/doctor.ts",
     "sync-skills": "tsx scripts/sync-skills.ts",
