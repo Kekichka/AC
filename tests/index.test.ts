@@ -17,7 +17,9 @@ describe('data/index.json', () => {
       expect(c.vector.length).toBe(index.dimensions);
     }
 
-    const texts = new Map(index.documents.map((d) => [d.id, normalize(readFileSync(d.path, 'utf8'))]));
+    const texts = new Map(
+      index.documents.map((d) => [d.id, normalize(readFileSync(d.path.replace(/\\/g, '/'), 'utf8'))])
+    );
     for (const c of index.chunks) {
       const text = texts.get(c.docId);
       expect(text, `немає документа ${c.docId}`).toBeDefined();
@@ -25,7 +27,8 @@ describe('data/index.json', () => {
     }
 
     for (const d of index.documents) {
-      expect(sha256(normalize(readFileSync(d.path, 'utf8'))), `${d.id} змінився — npm run index`).toBe(d.sha256);
+      const safePath = d.path.replace(/\\/g, '/');
+      expect(sha256(normalize(readFileSync(safePath, 'utf8'))), `${d.id} змінився — npm run index`).toBe(d.sha256);
     }
   });
 });

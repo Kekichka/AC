@@ -16,7 +16,7 @@ async function main() {
 
   for (const filename of files) {
     const docId = filename.replace(/\.(md|txt)$/, '');
-    const path = join(corpusDir, filename);
+    const path = `corpus/${filename}`;
     const raw = readFileSync(path, 'utf8');
     const norm = normalize(raw);
     const hash = sha256(norm);
