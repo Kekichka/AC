@@ -32,6 +32,9 @@ jobs:
       - name: Юніт-тести
         run: npm test
 
+      - name: Брама верифікатора специфікації (Крок 03)
+        run: npm run verify
+
       - name: Збірка
         run: npm run build
 
