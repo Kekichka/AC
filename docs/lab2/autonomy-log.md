@@ -83,3 +83,15 @@
   4. Зафіксовано траси `parallel-before` та `parallel-after` у Langfuse і збережено скріншоти у `docs/lab2/traces/`.
   5. Складено звіт `docs/lab2/budget.md`.
 - Відхилення від плану: Немає.
+
+## Сесія 08 · 2026-10-13 · Крок 08 (MCP-сервер за специфікацією)
+- Інструмент: VS Code + Git Bash + Assistant
+- Модель: Gemini 3.8 Flash / Claude 3.5 Sonnet
+- Режим дозволів: Ask before edit / Step-by-step confirmation
+- Мета: Створення специфікації MCP-сервера, реалізація read-only інструментів на stdio транспорті та тестів безпеки (path traversal protection).
+- Що зроблено:
+  1. Розроблено специфікацію `docs/lab2/mcp-spec.md` з описами інструментів та сценаріями зловживань.
+  2. Реалізовано `src/mcp/server.ts` за стандартом JSON-RPC 2.0 (stdio).
+  3. Реалізовано інструменти `search_documents`, `get_document_chunk` та `list_available_documents`.
+  4. Написано тести `tests/mcp-server.test.ts` (включно з обов'язковим тестом відмови при спробі `../../.env.local`).
+- Відхилення від плану: Немає.

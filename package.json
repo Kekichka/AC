@@ -19,6 +19,7 @@
     "doctor": "tsx scripts/doctor.ts",
     "sync-skills": "tsx scripts/sync-skills.ts",
     "verify": "tsx scripts/verify.ts docs/lab2/verify-input.diff",
+    "mcp:server": "tsx src/mcp/server.ts",
     "log:import": "tsx scripts/transcript-to-jsonl.ts"
   },
   "dependencies": {
