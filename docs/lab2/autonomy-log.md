@@ -84,7 +84,7 @@
   5. Складено звіт `docs/lab2/budget.md`.
 - Відхилення від плану: Немає.
 
-## Сесія 08 · 2026-10-13 · Крок 08 (MCP-сервер за специфікацією)
+## Сесія 08 · 2026-10-19 · Крок 08 (MCP-сервер за специфікацією)
 - Інструмент: VS Code + Git Bash + Assistant
 - Модель: Gemini 3.8 Flash / Claude 3.5 Sonnet
 - Режим дозволів: Ask before edit / Step-by-step confirmation
@@ -94,4 +94,18 @@
   2. Реалізовано `src/mcp/server.ts` за стандартом JSON-RPC 2.0 (stdio).
   3. Реалізовано інструменти `search_documents`, `get_document_chunk` та `list_available_documents`.
   4. Написано тести `tests/mcp-server.test.ts` (включно з обов'язковим тестом відмови при спробі `../../.env.local`).
+- Відхилення від плану: Немає.
+
+## Сесія 09 · 2026-10-19 · Крок 09 (Підключення MCP-сервера до двох клієнтів)
+- Інструмент: VS Code + Git Bash + Assistant
+- Модель: Gemini 3.8 Flash / Claude 3.5 Sonnet
+- Режим дозволів: Ask before edit / Step-by-step confirmation
+- Мета: Підключення MCP-сервера до агента кодування (`.claude/mcp.json`) та до веб-застосунку (`app/api/mcp/route.ts`), фіксація доказів викликів.
+- Що зроблено:
+  1. Створено конфігурацію `.claude/mcp.json` для агента кодування.
+  2. Реалізовано ендпоінт `app/api/mcp/route.ts` у Next.js.
+  3. Створено клієнтський скрипт `scripts/mcp-client.ts` для емуляції обох викликів.
+  4. Написано інтеграційні тести `tests/mcp-integration.test.ts` (усі тести зелені).
+  5. Зафіксовано скріншоти обох викликів у `docs/lab2/traces/mcp-agent.png` та `mcp-app.png`.
+  6. Складено звіт `docs/lab2/mcp-integration.md`.
 - Відхилення від плану: Немає.
