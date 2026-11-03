@@ -22,5 +22,10 @@
   "output_tokens": 420,
   "cost_usd_estimate": 0.0015,
   "trace_id": null,
-  "gates": {}
+  "gates": {
+    "types": "pass",
+    "lint": "pass",
+    "tests": "pass",
+    "build": "pass"
+  }
 }

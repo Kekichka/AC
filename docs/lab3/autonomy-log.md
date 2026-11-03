@@ -15,3 +15,16 @@
   5. Згенеровано перші прогони у `docs/lab3/runs/`.
   6. Описано специфікацію фабрики у `docs/lab3/factory.md`.
 - Відхилення від плану: Немає.
+
+
+## Сесія 02 · 2026-10-21 · Крок 01 (Ланцюг детермінованих брам)
+- Інструмент: VS Code + Git Bash + GitHub Actions + Assistant
+- Модель: Gemini 3.8 Flash / Claude 3.5 Sonnet
+- Режим дозволів: `dontAsk` / Step-by-step confirmation
+- Мета: Побудова ланцюга детермінованих брам `.github/workflows/gates.yml` (`types` → `lint` → `tests` → `build` → `record`), налаштування збору вердиктів та проведення тесту навмисного падіння.
+- Що зроблено:
+  1. Реалізовано скрипт `scripts/harness/record-gates.mjs` для оновлення `gate-record.json` та `run.json`.
+  2. Створено GitHub Actions workflow `.github/workflows/gates.yml` з явними `timeout-minutes`, `concurrency` та `outputs`.
+  3. Описано архітектуру брам у `docs/lab3/gates.md`.
+  4. Проведено тест навмисного падіння на гілці `harness/red-2026-10-21`: брама `types` впала, наступні стали `skipped`, а `record` зафіксувала вердикт.
+- Відхилення від плану: Немає.
