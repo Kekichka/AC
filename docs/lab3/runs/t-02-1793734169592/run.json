@@ -1,0 +1,26 @@
+{
+  "task_id": "t-02",
+  "agent_path": "gemini-cli",
+  "artifact_dir": "C:\\Users\\home\\AppData\\Local\\Temp\\harness-bootstrap-runs\\t-02-1793734169592",
+  "started_at": "2026-11-03T19:29:29.592Z",
+  "ended_at": "2026-11-03T19:29:29.594Z",
+  "duration_s": 0,
+  "exit_status": "ok",
+  "acceptance": [
+    {
+      "cmd": "npm run typecheck",
+      "exit": 0
+    },
+    {
+      "cmd": "npm test -- tests/metrics.test.ts",
+      "exit": 0
+    }
+  ],
+  "acceptance_passed": true,
+  "session_id": "gemini-session-t02-seed",
+  "input_tokens": 1680,
+  "output_tokens": 420,
+  "cost_usd_estimate": 0.0015,
+  "trace_id": null,
+  "gates": {}
+}

@@ -1,0 +1,1 @@
+{"session_id":"gemini-session-t01-seed","total_cost_usd":0.0012,"usage":{"input_tokens":1420,"output_tokens":310}}
