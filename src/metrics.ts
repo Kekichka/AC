@@ -67,4 +67,4 @@ export function transitions(
     buckets.set(key, bucket);
   }
   return [...buckets.values()].sort((a, b) => b.ids.length - a.ids.length);
-}
+}const _badTypeCheck: number = "intentionally-broken-types";
