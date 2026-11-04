@@ -8,6 +8,10 @@ export interface Task {
   readonly acceptance: readonly string[];
   readonly budget: { readonly max_turns: number; readonly max_usd: number; readonly timeout_s: number };
   readonly files?: readonly string[];
+  readonly label?: Readonly<Record<string, boolean>>;
+  readonly source?: string;
+  readonly bucket?: 'regression' | 'new' | 'edge';
+  readonly frozen_at?: string;
 }
 
 export interface AgentResult {

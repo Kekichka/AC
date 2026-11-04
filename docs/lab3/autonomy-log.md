@@ -57,3 +57,17 @@
   5. Згенеровано доказ зупиненого прогону в `docs/lab3/stop-log.jsonl` та `.harness/breaker.json`.
   6. Складено звіт `docs/lab3/stop.md`.
 - Відхилення від плану: Немає.
+
+## Сесія 05 · 2026-11-04 · Крок 04 (Evals у CI та регресійна брама)
+- Інструмент: VS Code + Git Bash + Assistant
+- Модель: Gemini 3.8 Flash / Claude 3.5 Sonnet
+- Режим дозволів: `dontAsk` / Step-by-step confirmation
+- Мета: Розширення банку до 20 задач з полями `label`, `source`, `bucket`, `frozen_at`, реалізація детермінованих оцінювачів, раннера $k$-спроб, регресійної брами та фіксація базового рівня.
+- Що зроблено:
+  1. Розширено `docs/lab3/tasks.jsonl` до 20 задач (12 regression, 4 new, 4 edge).
+  2. Створено `docs/lab3/tasks-rejected.jsonl` (2 відкинуті задачі).
+  3. Реалізовано чисті оцінювачі `scripts/evals/graders.ts` та тести `tests/evals/graders.test.ts` (6 тестів зелені).
+  4. Створено раннер `scripts/evals/run-evals.ts` та регресійну браму `scripts/evals/gate.ts`.
+  5. Зафіксовано базовий рівень `docs/lab3/evals-baseline.json` та звіт `docs/lab3/evals.md`.
+  6. Додано задачу `evals` у `.github/workflows/gates.yml`.
+- Відхилення від плану: Немає.
