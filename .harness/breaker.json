@@ -1,0 +1,6 @@
+{
+  "state": "open",
+  "fails": 1,
+  "openedAt": "2026-11-04T14:03:15.226Z",
+  "trip": "HTTP 429 Quota Exceeded (gemini-3.8-flash limit)"
+}
