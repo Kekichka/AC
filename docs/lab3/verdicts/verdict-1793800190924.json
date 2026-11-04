@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": "A1",
+      "verdict": "pass",
+      "reason": "Тести валідатора та набору проходять без помилок",
+      "evidence": "tests/validate-golden.test.ts:1"
+    },
+    {
+      "id": "A2",
+      "verdict": "pass",
+      "reason": "queries.jsonl валідний",
+      "evidence": "docs/lab2/golden/queries.jsonl:1"
+    },
+    {
+      "id": "A3",
+      "verdict": "pass",
+      "reason": "Базова лінія зафіксована з freeze SHA",
+      "evidence": "docs/lab2/baseline.md:3"
+    },
+    {
+      "id": "A4",
+      "verdict": "pass",
+      "reason": "Субагенти обмежені інструментами Read/Grep/Glob",
+      "evidence": ".claude/agents/spec-auditor.md:4"
+    },
+    {
+      "id": "A5",
+      "verdict": "pass",
+      "reason": "Сувора перевірка схеми Zod наявна в src/verify/schema.ts",
+      "evidence": "src/verify/schema.ts:18"
+    }
+  ]
+}

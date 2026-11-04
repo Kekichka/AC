@@ -20,5 +20,5 @@ export const verifyReport = z
 export type VerifyReport = z.infer<typeof verifyReport>;
 
 export function isBlocked(report: VerifyReport): boolean {
-  return report.results.some((r) => r.verdict === 'fail');
+  return report.results.some((r) => r.verdict !== 'pass');
 }

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { criterionVerdict, verifyReport, isBlocked } from '../src/verify/schema';
 
-describe('Verifier Schema & Gate', () => {
-  it('validates a correct criterion verdict', () => {
+describe('Verifier Schema & Gate (Крок 02)', () => {
+  it('валідує коректний вердикт критерію', () => {
     const valid = {
       id: 'A1',
       verdict: 'pass',
@@ -12,7 +12,7 @@ describe('Verifier Schema & Gate', () => {
     expect(criterionVerdict.safeParse(valid).success).toBe(true);
   });
 
-  it('rejects an invalid verdict type', () => {
+  it('відхиляє невалідний тип вердикту', () => {
     const invalid = {
       id: 'A1',
       verdict: 'maybe',
@@ -22,7 +22,7 @@ describe('Verifier Schema & Gate', () => {
     expect(criterionVerdict.safeParse(invalid).success).toBe(false);
   });
 
-  it('isBlocked returns true when at least one fail exists', () => {
+  it('isBlocked повертає true, якщо є хоч один fail', () => {
     const report = {
       results: [
         { id: 'A1', verdict: 'pass' as const, reason: 'ok', evidence: 'f1:1' },
@@ -32,11 +32,22 @@ describe('Verifier Schema & Gate', () => {
     expect(isBlocked(report)).toBe(true);
   });
 
-  it('isBlocked returns false when only pass and unknown exist', () => {
+  it('isBlocked повертає true, якщо є статус unknown (сувора брама харнеса)', () => {
     const report = {
       results: [
         { id: 'A1', verdict: 'pass' as const, reason: 'ok', evidence: 'f1:1' },
         { id: 'A2', verdict: 'unknown' as const, reason: 'no diff available', evidence: '' },
+      ],
+    };
+    // У харнесі unknown теж блокує злиття!
+    expect(isBlocked(report)).toBe(true);
+  });
+
+  it('isBlocked повертає false тільки коли ВСІ вердикти pass', () => {
+    const report = {
+      results: [
+        { id: 'A1', verdict: 'pass' as const, reason: 'ok', evidence: 'f1:1' },
+        { id: 'A2', verdict: 'pass' as const, reason: 'tests green', evidence: 'f2:2' },
       ],
     };
     expect(isBlocked(report)).toBe(false);
