@@ -1,0 +1,11 @@
+Trace ID: d90d4ce81564428f853a23e5858d323d
+Date: 2026-11-04
+Task ID: t-breaker-429
+Attempt: 1
+Class: харнес
+Reason: Circuit Breaker негайно розімкнув конвеєр (state: open) через отримання HTTP 429 Quota Exceeded
+Spans: invoke_agent -> chat (with tool evaluation)
+Input Tokens: 210
+Output Tokens: 0
+Duration: 190 ms
+Exit Status: stopped_by_harness

@@ -1,0 +1,11 @@
+Trace ID: c15c8904c8912a3cde50b1af1958fa1f
+Date: 2026-11-04
+Task ID: t-08-schema-err
+Attempt: 1
+Class: інструмент
+Reason: search_documents: помилка валідації topK > 10
+Spans: invoke_agent -> chat (with tool evaluation)
+Input Tokens: 520
+Output Tokens: 95
+Duration: 280 ms
+Exit Status: failed

@@ -1,0 +1,11 @@
+Trace ID: 4a4d5b46964b699be612d074ed5acf3a
+Date: 2026-11-04
+Task ID: t-17-edge
+Attempt: 1
+Class: задача
+Reason: Нерелевантне завдання рецепту піци
+Spans: invoke_agent -> chat (with tool evaluation)
+Input Tokens: 450
+Output Tokens: 0
+Duration: 120 ms
+Exit Status: failed

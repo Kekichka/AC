@@ -84,3 +84,18 @@
   4. Реалізовано скрипт калібрування `scripts/judge/calibrate.ts` (каппа зросла з 0.607 до 0.829, на відкладених: 0.727).
   5. Складено звіт `docs/lab3/judge.md` з матрицею 3×3 (пропускає погане = 0).
 - Відхилення від плану: Немає.
+
+## Сесія 07 · 2026-11-04 · Крок 06 (Трасування та аналіз помилок)
+- Інструмент: VS Code + Git Bash + Langfuse + Assistant
+- Модель: Gemini 3.8 Flash / Claude 3.5 Sonnet
+- Режим дозволів: `dontAsk` / Step-by-step confirmation
+- Мета: Підключення OpenTelemetry експортера через OTLP/HTTP до Langfuse, наскрізне прокидання `trace_id` у `run.json`, аналіз та класифікація 10 реальних відмов за 5 причинами.
+- Що зроблено:
+  1. Встановлено `@ai-sdk/otel` та `@opentelemetry/exporter-trace-otlp-http`.
+  2. Реалізовано `src/telemetry/otel.ts` та додано функцію `runTaskTraced()` у `scripts/harness/run-task.ts`.
+  3. Проведено 10 реальних прогонів із фіксацією живих трас у Langfuse Cloud.
+  4. Створено 10 текстових витяжок у `docs/lab3/traces/` для кожної класифікованої відмови.
+  5. Оновлено `trace_id` у паспортах `docs/lab3/runs/**/run.json`.
+  6. Складено звіт `docs/lab3/errors.md` із датою фіксації та розбором 5 класів помилок.
+  7. Оновлено `.env.example`.
+- Відхилення від плану: Немає.

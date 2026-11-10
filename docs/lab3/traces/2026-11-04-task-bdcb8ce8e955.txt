@@ -1,0 +1,11 @@
+Trace ID: bdcb8ce8e9551a08b3d487ce9fe5538a
+Date: 2026-11-04
+Task ID: r-01-rejected
+Attempt: 1
+Class: задача
+Reason: Відсутні машинні acceptance перевірки
+Spans: invoke_agent -> chat (with tool evaluation)
+Input Tokens: 480
+Output Tokens: 0
+Duration: 140 ms
+Exit Status: failed

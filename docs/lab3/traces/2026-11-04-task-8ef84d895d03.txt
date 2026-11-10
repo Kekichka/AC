@@ -1,0 +1,11 @@
+Trace ID: 8ef84d895d03487b95dfcd0a831b96b3
+Date: 2026-11-04
+Task ID: t-17-edge
+Attempt: 1
+Class: задача
+Reason: Нерелевантне завдання рецепту піци; не має відношення до репозиторію AC
+Spans: invoke_agent -> chat (with tool evaluation)
+Input Tokens: 450
+Output Tokens: 0
+Duration: 120 ms
+Exit Status: failed

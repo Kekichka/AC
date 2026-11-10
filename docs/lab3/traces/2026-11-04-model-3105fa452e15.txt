@@ -1,0 +1,11 @@
+Trace ID: 3105fa452e157d7f68e0b0ef3f117af3
+Date: 2026-11-04
+Task ID: t-14-instability
+Attempt: 2
+Class: модель
+Reason: Непостійність генерації коду на другій спробі
+Spans: invoke_agent -> chat (with tool evaluation)
+Input Tokens: 1380
+Output Tokens: 310
+Duration: 1180 ms
+Exit Status: failed

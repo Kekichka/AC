@@ -1,0 +1,11 @@
+Trace ID: 986a6004ae514e8f9b503128917b9c52
+Date: 2026-11-04
+Task ID: t-03-ambiguous
+Attempt: 1
+Class: промпт
+Reason: Агент описав план текстом замість виклику Edit; finish_reason=stop, 0 спанів execute_tool
+Spans: invoke_agent -> chat (0 tool calls)
+Input Tokens: 710
+Output Tokens: 190
+Duration: 490 ms
+Exit Status: failed

@@ -1,0 +1,11 @@
+Trace ID: ea0d8ef4f993fc4c7fec40d8a6f6a641
+Date: 2026-11-04
+Task ID: t-03-ambiguous
+Attempt: 1
+Class: промпт
+Reason: Агент згенерував переказ інструкцій без Edit
+Spans: invoke_agent -> chat (0 tool calls)
+Input Tokens: 710
+Output Tokens: 190
+Duration: 490 ms
+Exit Status: failed
